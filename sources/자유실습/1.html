@@ -1,82 +1,156 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <title>가입 신청서</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
-      * {box-sizing: border-box; margin:0px; padding:0px;}
-      body {font-family: 'Cute Font', cursive;}
-      form {margin: 0px auto; width:500px; padding:50px; border: 2px black solid;}
-      h1 {font-size: 35px; text-align: center; margin-bottom:30px;}
-      div {margin-bottom:7px;}
-      div > label {font-size:22px;}
-      input {width:50%;height:28px;}
-      .index {float:left; width:80px;}
-      .checkbox, .radio {display:flex; justify-content: space-around;}
-      .button {width:399px; margin:0px auto; display:flex; justify-content: space-between;}
-      input[type="radio"] {width:28px;}
-      input[type="submit"], input[type="reset"] {margin-top:30px; height:40px; text-align:center; font-size:22px; font-family: 'Cute Font', cursive; color:#FFF; background-color: black; border-radius: 5px; }
-      #collage, input[type="text"], input[type="color"], input[type="date"] {width: 74%; text-align:center; font-size:22px; font-family: 'Cute Font', cursive;}
-      input[type="submit"]:hover, input[type="reset"]:hover {background-color: red;}
-    </style>
-  </head>
-  <body>
-    <form>
-      <h1>가입 신청서</h1>
-      <div>
-        <label class="index" style=margin-bottom:7px;>이름</label>
-        <input type="text" id="user_name" autofocus required placeholder="이름을 입력해주세요." style=margin-bottom:7px; autocomplete="off">
-        <label class="index">이메일</label>
-        <input type="text" id="user_email" required placeholder="이메일을 입력해주세요." autocomplete="off">
+
+<head>
+  <meta charset="utf-8">
+  <title>가입 신청서</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      font-family: 'Cute Font', cursive;
+    }
+
+    form {
+      margin: 0px auto;
+      width: 500px;
+      padding: 50px;
+      border: 2px black solid;
+    }
+
+    h1 {
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    div {
+      margin-bottom: 7px;
+    }
+
+    div>label {
+      font-size: 22px;
+    }
+
+    input {
+      width: 50%;
+      height: 28px;
+    }
+
+    .index {
+      float: left;
+      width: 80px;
+    }
+
+    .checkbox,
+    .radio {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .button {
+      width: 399px;
+      margin: 0px auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input[type="radio"] {
+      width: 28px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      margin-top: 30px;
+      height: 40px;
+      text-align: center;
+      font-size: 22px;
+      font-family: 'Cute Font', cursive;
+      color: #FFF;
+      background-color: black;
+      border-radius: 5px;
+    }
+
+    #collage,
+    input[type="text"],
+    input[type="color"],
+    input[type="date"] {
+      width: 74%;
+      text-align: center;
+      font-size: 22px;
+      font-family: 'Cute Font', cursive;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>가입 신청서</h1>
+    <div>
+      <label class="index" style=margin-bottom:7px;>이름</label>
+      <input type="text" id="user_name" autofocus required placeholder="이름을 입력해주세요." style=margin-bottom:7px;
+        autocomplete="off">
+      <label class="index">이메일</label>
+      <input type="text" id="user_email" required placeholder="이메일을 입력해주세요." autocomplete="off">
+    </div>
+    <div>
+      <label class="index">성별</label>
+      <div class="radio">
+        <input type="radio" name="gender" value="male">
+        <label for="male">남성</label>
+        <input type="radio" name="gender" value="female">
+        <label for="female">여성</label>
       </div>
-      <div>
-        <label class="index">성별</label>
-        <div class="radio">
-          <input type="radio" name="gender" value="male">
-          <label for="male">남성</label>
-          <input type="radio" name="gender" value="female">
-          <label for="female">여성</label>
-        </div>
+    </div>
+    <div>
+      <label class="index">흥미</label>
+      <div class="checkbox">
+        <input type="checkbox" name="favorite" value="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" name="favorite" value="java">
+        <label for="java">JAVA</label>
+        <input type="checkbox" name="favorite" value="php">
+        <label for="html">PHP</label>
       </div>
-      <div>
-        <label class="index">흥미</label>
-        <div class="checkbox">
-          <input type="checkbox" name="favorite" value="html">
-          <label for="html">HTML</label>
-          <input type="checkbox" name="favorite" value="java">
-          <label for="java">JAVA</label>
-          <input type="checkbox" name="favorite" value="php">
-          <label for="html">PHP</label>
-        </div>
-      </div>
-      <div>
-        <label for="collage" class="index">대학</label>
-        <select id="collage">
-          <option value="seoul">수도권 대학</option>
-          <option value="city">지방 대학</option>
-          <option value="abroad">해외 대학</option>
-        </select>
-      </div>
-      <div>
-        <label class="index">선호 색상</label>
-        <input type="color">
-      </div>
-      <div>
-        <label class="index">가입일</label>
-        <input type="date">
-      </div>
-      <div class="button">
-        <input type="submit" id="submit" value="가입하기">
-        <input type="reset" value="다시 입력하기">
-      </div>
-    </form>
-    
+    </div>
+    <div>
+      <label for="collage" class="index">대학</label>
+      <select id="collage">
+        <option value="seoul">수도권 대학</option>
+        <option value="city">지방 대학</option>
+        <option value="abroad">해외 대학</option>
+      </select>
+    </div>
+    <div>
+      <label class="index">선호 색상</label>
+      <input type="color">
+    </div>
+    <div>
+      <label class="index">가입일</label>
+      <input type="date">
+    </div>
+    <div class="button">
+      <input type="submit" id="submit" value="가입하기">
+      <input type="reset" value="다시 입력하기">
+    </div>
+  </form>
+
   <script>
-    document.querySelector("#submit").onclick = function() {
+    document.querySelector("#submit").onclick = function () {
       alert("데이터 전송 완료");
     };
-    
   </script>
-  </body>
+</body>
+
 </html>

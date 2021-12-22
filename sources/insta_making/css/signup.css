@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(250, 250, 250);
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -5,19 +11,20 @@
 
 main {
   display: flex;
+  height: 825px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 44px;  
+  min-height: 100%;
 }
 
 .main-right {
   margin-top: 12px;
   max-width: 350px;
-  height: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
-  background-color: white;
 }
 
 footer {
@@ -30,24 +37,28 @@ footer {
   font-size: 14px;
   line-height: 16px;
   position: relative;
+  top: -44px;
   color: rgb(142, 142, 142);
   word-break: keep-all;
 }
 
 .right_top {
+  margin-top: 12px;
   margin-bottom: 10px;
   padding: 10px 0px;
-  border: 1px solid rgba(128, 128, 128, 0.097);
+  border: 1px solid rgba(128, 128, 128, 0.336);
   width: 350px;
+  background-color: white;
 }
 
 .signup {
   width: 350px;
   margin-bottom: 10px;
   padding: 25px 0px;
-  border: 1px solid rgba(128, 128, 128, 0.097);
+  border: 1px solid rgba(128, 128, 128, 0.336);
   font-size: 14px;
   line-height: 18px;
+  background-color: white;
 }
 
 .signin_link {

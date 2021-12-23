@@ -9,7 +9,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Instagram</title>
+  <link href="images/shortcut.ico" rel="shortcut icon" type="image/x-icon">
   <link href="./css/index.css" rel="stylesheet">
   <script src="./js/index.js"></script>
 </head>
@@ -18,20 +19,20 @@
   <div id="container">
     <main>
       <div class="main-left">
-
+        <div class="screen_position">
+          <div class="screen"></div>
+        </div>
       </div>
 
       <div class="main-right">
         <div class="right_top">
-
           <div >
             <img class="logo_image" src="./images/logo.png" alt="Instagram">
           </div>
-
           <div class="login_form">
-            <form>
-              <input type="text" id="user_id" required placeholder=" 전화번호, 사용자 이름 또는 이메일" onkeyup="enableButton()">
-              <input type="text" id="user_password" required placeholder=" 비밀번호" onkeyup="enableButton()">
+            <form action="main.html">
+              <input type="text" id="user_id" required autocomplete="off" placeholder=" 전화번호, 사용자 이름 또는 이메일" onkeyup="enableButton()">
+              <input type="password" id="user_password" required placeholder=" 비밀번호" onkeyup="enableButton()">
               <input type="submit" id="login_button" value="로그인" disabled>
               <div class="hor_line">
                 <span>또는</span>

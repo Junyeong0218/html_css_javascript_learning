@@ -4,10 +4,10 @@ function enableButton(){
 
   if(id.length > 0 & pw.length > 5){
     document.getElementById("login_button").disabled = false;
-    document.getElementById("login_button").setAttribute("style", "background-color: rgb(0, 146, 246")
+    document.getElementById("login_button").setAttribute("style", "background-color: rgb(0, 146, 246); cursor: pointer")
   } else {
     document.getElementById("login_button").disabled = true;
-    document.getElementById("login_button").setAttribute("style", "background-color: rgb(178,223,252)")
+    document.getElementById("login_button").setAttribute("style", "background-color: rgb(178,223,252); cursor: default")
   }
   
 }

@@ -24,7 +24,7 @@ body {
 nav {
     width: 100%;
     height: 60px;
-    border: 1px solid rgb(219, 219, 219);
+    border-bottom: 1px solid rgb(219, 219, 219);
     background-color: white;
 }
 
@@ -93,8 +93,9 @@ main {
 .feeds_profile_name {
     margin-left: 14px;
     display: inline;
-    position: relative;
-    top: -2px;
+    color: #262626;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .feeds_instant_info > button {
@@ -128,7 +129,165 @@ main {
 
 .feeds_bottom {
     width: 614px;
-    height: 178px;
+    padding: 0px 16px;
+}
+
+.reaction {
+    width: 568px;
+    margin-top: 4px;
+    padding: 6px 0px 8px;
+    display: flex;
+    flex-direction: row;
+    margin-left: -8px;
+
+}
+
+.reaction_button {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    background-color: white;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.reaction_button > span {
+    width: 24px;
+    height: 24px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.like > span {
+    background-image: url("../images/menu_activity.png");
+    position: relative;
+    top: 1px;
+}
+
+.comment > span {
+    background-image: url("../images/reaction_comment.png");
+}
+
+.message > span {
+    background-image: url("../images/menu_message.png");
+    position: relative;
+    top: 2px;
+}
+
+.add_to_collection {
+    margin-left: auto;
+    margin-right: -10px;
+}
+
+.add_to_collection > span {
+    background-image: url("../images/reaction_collect.png");
+    position: relative;
+    top: 1px;
+}
+
+.taken_likes {
+    width: 568px;
+    height: 18px;
+    margin-bottom: 8px;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #262626;
+}
+
+.feeds_text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    width: 568px;
+    justify-content: center;
+}
+
+.feeds_text > div {
+    display: flex;
+}
+
+.feeds_name, .feeds_contents {
+    color: #262626;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.feeds_name {
+    font-weight: 600;
+    margin: 0;
+}
+
+.view_all_comments {
+    padding: 0px;
+    border: none;
+    background-color: white;
+    font-size: 14px;
+    color: #8e8e8e;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.upload_time {
+    margin-bottom: 16px;
+    font-size: 10px;
+    color: #8e8e8e;
+    line-height: 18px;
+}
+
+article > form {
+    height: 52px;
+    padding: 6px 16px;
+    border-top: 1px solid rgb(219, 219, 219);
+    display: flex;
+    align-items: center;
+}
+
+.emoji {
+    box-sizing: content-box;
+    padding: 8px 16px 8px 0px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: white;
+}
+
+.emoji > span {
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/emoji_icon.png");
+    background-size: contain;
+    display: inline-block;
+}
+
+article > form {
+    display: flex;
+    justify-content: space-around;
+}
+
+form > textarea {
+    height: 18px;
+    padding: 0px;
+    border: none;
+    color: #262626;
+    line-height: 18px;
+    max-height: 80px;
+    resize: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+.comment_upload_button {
+    border: none;
+    background-color: white;
+    color: #0095f6;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .main_right {
@@ -360,15 +519,24 @@ footer > nav > ul > li > a:not(.lastli)::after {
 }
 
 .logo {
-    margin-top: 7px;
+    margin-top: 6px;
+}
+
+.logo > a {
+    display: flex;
+    flex: 1 0 127px;
+    position: relative;
 }
 
 .search_pos {
     box-sizing: border-box;
     height: 36px;
+    min-width: 125px;
+    width: 268px;
     position: relative;
     display: flex;
     align-items: center;
+    flex: 0 1 auto;
 }
 
 .search_logo {
@@ -377,6 +545,8 @@ footer > nav > ul > li > a:not(.lastli)::after {
     height: 10px;
     margin-right: 6px;
     display: inline-block;
+    justify-content: flex-start;
+    position: relative;
 }
 
 input[type="text"] {
@@ -404,7 +574,7 @@ input[type="text"] {
 
 .nav_menu {
     margin: 0;
-    padding: 0;
+    padding-left: 24px;
     height: 24px;
     display: flex;
     align-items: center;

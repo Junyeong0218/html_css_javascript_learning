@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/shortcut_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/basic.css">
+    <title>My to do Lists</title>
+</head>
+<body>
+    <div id="container">
+        <main>
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="time">
+                <span>00:00:00</span>
+            </div>
+            <form id="login-form" class="hidden">
+                <input type="text" required placeholder="이름을 입력해주세요">
+                <button>로그인</button>
+            </form>
+            <h1 id="greeting" class="hidden"></h1>
+            <form id="todo-form" class="hidden">
+                <input type="text" placeholder="할 일을 입력해주세요." autofocus="off" autocomplete="off" autocapitalize="off">
+                <button>입력</button>
+            </form>
+            <ul id="todo-list" class="hidden"></ul>
+            <div id="quote">
+                <span></span>
+                <span></span>
+            </div>
+        </main>
+    </div>
+    <div class="bg-cover"></div>
+    <script src="./js/background.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/greetings.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/weather.js"></script>
+</body>
+</html>
